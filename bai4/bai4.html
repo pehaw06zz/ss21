@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Nhap vao 1 so "));
+        let b = parseInt(prompt("Nhap vao 1 so "));
+        let c = parseInt(prompt("Nhap vao 1 so "));
+        if( a===0){
+            alert("khong phai phuong trinh can bac 2");
+
+        }else{
+            let delta = b*b-4*a*c;
+            if(delta > 0){
+            alert(`Hai nghiệm: x1 = ${(-b + Math.sqrt(delta)) / (2 * a)}, x2 = ${(-b - Math.sqrt(delta)) / (2 * a)}`);
+            }else if (delta===0){
+                alert(`Nhiem kep: ${-b/(2*a)}`);
+            }else{
+                alert("Phuong trinh vo nghiem.");
+            }
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for( num = 0 ; num <= 999 ; num++){
+            let tram = Math.floor ( num / 100);
+            let chuc = Math.floor (( num % 100) /10);
+            let donvi = Math.floor ( num % 10);
+            let sum = Math.pow(tram,3)+Math.pow(chuc,3)+Math.pow(donvi,3);
+            if(sum===num){
+                alert(num);
+            } 
+        }
+
+    </script>
+</body>
+</html>

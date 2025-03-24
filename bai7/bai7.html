@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let principal = parseFloat(prompt("Nhập số tiền ban đầu: "));
+        let interestRate = parseFloat(prompt("Nhập lãi suất tháng (%): ")) / 100;
+        let months = parseInt(prompt("Nhập số tháng gửi: "));
+
+        if (principal > 0 && interestRate > 0 && months > 0) {
+            let interestEarned = 0;
+            let totalAmount = principal;
+
+            for (let i = 0; i < months; i++) {
+                let interest = totalAmount * interestRate;
+                interestEarned += interest;
+                totalAmount += interest;
+            }
+
+            alert(`Tiền lãi: ${interestEarned.toFixed(3)}\nTiền nhận được: ${totalAmount.toFixed(3)}`);
+        } else {
+            alert("Vui lòng nhập các giá trị hợp lệ.");
+        }
+
+    </script>
+</body>
+
+</html>
